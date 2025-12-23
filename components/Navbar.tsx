@@ -30,17 +30,21 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         {/* LOGO */}
-        <motion.a 
-          href="#home" 
+        <motion.a
+          href="#home"
           className="flex items-center space-x-3 group"
           whileHover={{ scale: 1.05 }}
         >
           <div className="relative">
-            <span className="text-3xl font-black tracking-tighter text-[#edf5fc]">ASI</span>
-            <motion.div 
+            <img
+              src="/frame_1.png"
+              alt="ASI Logo"
+              className="h-8 w-auto brightness-0 invert opacity-90"
+            />
+            <motion.div
               animate={{ opacity: [0.3, 1, 0.3] }}
               transition={{ repeat: Infinity, duration: 2 }}
-              className="absolute -right-3 top-1 w-1.5 h-1.5 bg-[#2176ff] rounded-full shadow-[0_0_8px_#2176ff]" 
+              className="absolute -right-3 top-1 w-1.5 h-1.5 bg-[#2176ff] rounded-full shadow-[0_0_8px_#2176ff]"
             />
           </div>
           <div className="h-6 w-[1px] bg-white/10 mx-2 hidden lg:block" />
@@ -91,7 +95,11 @@ const Navbar: React.FC = () => {
             className="lg:hidden fixed inset-0 z-[95] bg-[#1a1f22] p-10 flex flex-col"
           >
              <div className="flex justify-between items-center mb-20">
-                <span className="text-3xl font-black text-[#edf5fc] tracking-tighter">ASI</span>
+                <img
+                  src="/frame_1.png"
+                  alt="ASI Logo"
+                  className="h-10 w-auto brightness-0 invert opacity-90"
+                />
                 <button onClick={() => setIsOpen(false)} className="w-12 h-12 flex items-center justify-center rounded-xl glass text-white"><X size={20} /></button>
              </div>
 
